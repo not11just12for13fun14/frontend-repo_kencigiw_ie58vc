@@ -1,28 +1,18 @@
-import { useState } from 'react'
+import React from 'react'
+import { Link } from 'react-router-dom'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50">
+      <div className="max-w-3xl mx-auto px-6 py-20 text-center">
+        <h1 className="text-4xl font-bold text-gray-800">Vibe Coding Platform</h1>
+        <p className="mt-4 text-gray-600">Your AI-powered development environment</p>
+
+        <div className="mt-10 grid gap-3 justify-center">
+          <Link to="/steinteppich" className="inline-flex items-center justify-center rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-3 font-semibold transition-colors">Steinteppich Seite ansehen</Link>
+          <Link to="/test" className="inline-flex items-center justify-center rounded-lg bg-gray-900 hover:bg-gray-800 text-white px-5 py-3 font-semibold transition-colors">Backend/Test</Link>
         </div>
       </div>
     </div>
   )
 }
-
-export default App
